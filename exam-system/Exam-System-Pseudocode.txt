@@ -1,0 +1,156 @@
+==============================================================================================================================================
+Phase 1: Registration
+==============================================================================================================================================
+START
+
+INPUT name, email, phone number, password
+
+IF credentials are VALID THEN
+    CREATE account
+    SEND SMS code OR email code
+
+    INPUT verification code
+
+    IF code is correct THEN
+        ACTIVATE account
+        OUTPUT "Account activated"
+    ELSE
+        OUTPUT "Verification failed"
+    ENDIF
+
+ELSE
+    OUTPUT "Invalid credentials"
+ENDIF
+
+END
+
+==============================================================================================================================================
+Phase 2: Log-in
+==============================================================================================================================================
+
+START
+
+WHILE user NOT logged in DO
+
+    INPUT email, password
+
+    IF email AND password are correct THEN
+        OUTPUT "User logged into dashboard"
+        SET user logged in = TRUE
+    ELSE
+        OUTPUT "Error: try again or use password recovery"
+    ENDIF
+
+END WHILE
+
+END
+
+==============================================================================================================================================
+Phase 3: Browse & Select Exam
+==============================================================================================================================================
+
+START
+
+DISPLAY list of available exams
+
+INPUT selected_exam
+
+DISPLAY exam details (name, fees, available dates, locations)
+
+INPUT confirmation to book exam
+
+IF student confirms booking THEN
+    SAVE booking in system
+    OUTPUT "Booking successful"
+ELSE
+    OUTPUT "Booking cancelled"
+ENDIF
+
+END
+
+==============================================================================================================================================
+Phase 4: Payment & Booking
+==============================================================================================================================================	
+
+START
+
+REDIRECT student to payment page
+
+INPUT payment details
+
+IF payment is successful THEN
+    DISPLAY available dates and locations
+
+    INPUT selected date
+    INPUT selected location
+
+    SAVE booking details
+
+    SEND confirmation via email OR SMS
+
+    OUTPUT "Booking confirmed"
+ELSE
+    OUTPUT "Payment failed"
+ENDIF
+
+END
+
+==============================================================================================================================================
+Phase 5: Taking the Exam
+==============================================================================================================================================
+
+START
+
+STUDENT arrives at scheduled time and location
+
+ALLOW student to take exam
+
+IF exam is completed THEN
+    RECORD exam result in system
+    OUTPUT "Result recorded successfully"
+ENDIF
+
+END
+
+==============================================================================================================================================
+Phase 6: Result & Failure Scenarios
+==============================================================================================================================================
+
+START
+
+INPUT exam_result
+INPUT attempt_number
+
+IF exam_result = "PASS" THEN
+    DISPLAY result
+    SEND certificate to student
+
+ELSE
+
+    IF attempt_number = 1 THEN
+        OUTPUT "Fail - Pay 50% fee"
+        SET fee = 50%
+        BOOK new appointment
+
+    ELSE IF attempt_number = 2 THEN
+        OUTPUT "Fail - Pay 25% fee"
+        SET fee = 25%
+        BOOK new appointment
+
+    ELSE IF attempt_number = 3 THEN
+        OUTPUT "Fail - Wait 1 month and pay full fee"
+        WAIT 1 month
+        SET fee = 100%
+        BOOK new appointment
+
+    ELSE
+        OUTPUT "Fail - Pay full fee"
+        SET fee = 100%
+        BOOK new appointment
+    ENDIF
+
+ENDIF
+
+END
+
+==============================================================================================================================================
