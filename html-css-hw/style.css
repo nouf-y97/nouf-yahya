@@ -1,0 +1,89 @@
+body {
+    background-color: antiquewhite;
+    margin-top: 5%;
+}
+
+.index-formatting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+}
+
+.profile-card img {
+    width: 200px;
+    height: 30vh;
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: burlywood;
+    color: palevioletred;
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+fieldset{
+    padding: 6px 15px;
+    border-radius: 20px;
+    width: 1200px;
+}
+
+
