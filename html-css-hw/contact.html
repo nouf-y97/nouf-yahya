@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="stylesheet" href="style.css">
-<style>
-    #coloring{
-        text-decoration-color: red;
-    }
-</style>
+    <style>
+        #coloring {
+            text-decoration-color: red;
+        }
+    </style>
 </head>
 
 <body>
 
-        <header>
-       
-            <nav class="navigation">
+    <header>
+
+        <nav class="navigation">
             <a href="contact.html"> Contact us</a>
             <a href="about.html"> About me</a>
             <a href="table.html"> Table</a>
             <a href="index.html"> Index</a>
-            </nav>
-    
+        </nav>
+
     </header>
 
     <h1> Contact Form</h1>
@@ -45,37 +45,37 @@
             <input type="radio" id="female" name="gender" value="Female">
             <label for="female">Female</label>
         </fieldset>
-
+        <br />
         <fieldset>
-             <legend>Hobbies</legend>
-        <input type="checkbox" id="reading" name="hobby" value="Reading">
-        <label for="reading">Reading</label><br>
+            <legend>Hobbies</legend>
+            <input type="checkbox" id="reading" name="hobby" value="Reading">
+            <label for="reading">Reading</label><br>
 
-        <input type="checkbox" id="sports" name="hobby" value="Sports">
-        <label for="sports">Sports</label><br>
+            <input type="checkbox" id="sports" name="hobby" value="Sports">
+            <label for="sports">Sports</label><br>
 
-        <input type="checkbox" id="gaming" name="hobby" value="Gaming">
-        <label for="gaming">Gaming</label>
-</fieldset>
+            <input type="checkbox" id="gaming" name="hobby" value="Gaming">
+            <label for="gaming">Gaming</label>
+        </fieldset>
 
-
+        <br />
         <fieldset>
             <legend>Address Details</legend>
             <label for="country"> Country: </label>
-            
+
             <select name="country" id="country">
                 <option value="" disabled selected style="color: gray;"> Select a country
-                <optgroup label="Gulf Countries">Gulf Countries
-                    <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="Oman">Oman</option>
-                </optgroup>
+                    <optgroup label="Gulf Countries">Gulf Countries
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Oman">Oman</option>
+                    </optgroup>
 
-                <optgroup label="Arab Countries">Gulf Countries
-                    <option value="Jordan">Saudi Arabia</option>
-                    <option value="Sudan">Sudan</option>
-                </optgroup>
+                    <optgroup label="Arab Countries">Gulf Countries
+                        <option value="Jordan">Saudi Arabia</option>
+                        <option value="Sudan">Sudan</option>
+                    </optgroup>
             </select><br />
-
+            <br />
             <lable for="City">City:</lable>
             <input list="cities" id="city" name="city">
             <datalist id="cities">
@@ -84,19 +84,19 @@
                 <option value="Makkah">
             </datalist>
             <br />
+            <br />
         </fieldset>
+        <br />
         <fieldset>
             <legend>Message</legend>
             <label for="Message">Message</label>
             <textarea name="Message"></textarea>
             <br />
         </fieldset>
-
-
+        <br />
 
         <button type="submit" id="coloring"> Submit </button>
         <button type="reset"> Reset </button>
-
 
     </form>
 
